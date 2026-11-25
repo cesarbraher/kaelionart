@@ -1,0 +1,188 @@
+{
+  "clients": [
+    {
+      "name": "INEVISUAL",
+      "sector": "Agencia & Publicidad · Gto.",
+      "service": "Dirección Creativa & Branding"
+    },
+    {
+      "name": "Casa Basalto",
+      "sector": "Destilería Artesanal · México",
+      "service": "Identidad & Fotografía"
+    },
+    {
+      "name": "Atelier Vértice",
+      "sector": "Arquitectura Contemporánea",
+      "service": "Sitio Web Editorial"
+    },
+    {
+      "name": "Sonora Nexo",
+      "sector": "Producción Musical & Audio",
+      "service": "Audiovisual & Gráfica"
+    },
+    {
+      "name": "Foro Ceniza",
+      "sector": "Cultura & Exposiciones",
+      "service": "Campaña de Carteles"
+    },
+    {
+      "name": "Norte Clásico",
+      "sector": "Comercio & Retail Digital",
+      "service": "Landing Page & Marketing"
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "caso-casa-basalto",
+      "client": "Casa Basalto",
+      "discipline": "Identidad Visual & Dirección de Arte",
+      "year": "2026",
+      "summary": "Construcción geométrica de emblema sobre retícula áurea, papelería impresa en alto contraste y sistema gráfico modular para lanzamiento nacional.",
+      "deliverables": ["Logotipo Vectorial", "Manual de Marca", "Papelería", "Fotografía de Producto"],
+      "quote": "Cada trazo respondió a una intención clara. Pasamos de un boceto en papel a una identidad lista para exportación en tiempo récord."
+    },
+    {
+      "id": "caso-atelier-vertice",
+      "client": "Atelier Vértice",
+      "discipline": "Diseño Web & Portafolio Digital",
+      "year": "2026",
+      "summary": "Landing page editorial de carga ultrarrápida con galería arquitectónica, optimización SEO inicial, dominio propio e integración directa con WhatsApp Business.",
+      "deliverables": ["Landing Page", "Dominio & Hosting", "SEO Básico", "Integración WhatsApp"],
+      "quote": "El sitio refleja exactamente el rigor de nuestra obra. Desde la primera semana aumentaron las consultas calificadas por WhatsApp."
+    },
+    {
+      "id": "caso-foro-ceniza",
+      "client": "Foro Ceniza",
+      "discipline": "Campaña Gráfica & Producción Audiovisual",
+      "year": "2025",
+      "summary": "Serie de flyers digitales e impresos con composición geométrica y cápsulas promocionales en movimiento para difusión multiplataforma en redes sociales.",
+      "deliverables": ["Serie de Flyers", "Reel Promocional", "Formatos Editables", "Kit Redes Sociales"],
+      "quote": "La combinación de criterio artístico tradicional con producción ágil nos permitió lanzar toda la temporada visual en menos de una semana."
+    }
+  ],
+  "gallery": [
+    {
+      "id": "img-identidad-monograma",
+      "type": "image",
+      "category": "Identidad Visual",
+      "title": "Sistema de Identidad & Papelería Editorial",
+      "client": "Estudio Monolito",
+      "year": "2026",
+      "image": "assets/gallery/work-branding-identity.jpg",
+      "aspect": "landscape",
+      "description": "Desarrollo integral de monograma geométrico trazado con compás, proporción áurea y aplicación sobre papelería en algodón ceniza y cartulina carbón con relieve seco.",
+      "deliverables": ["AI", "SVG", "PDF", "PSD", "PNG", "Manual de Uso"],
+      "whatsappTopic": "Diseño Original de Logotipo e Identidad Visual"
+    },
+    {
+      "id": "img-cartel-geometrico",
+      "type": "image",
+      "category": "Flyer & Cartel",
+      "title": "Cartel Expositivo — Retícula & Contraste",
+      "client": "Foro Ceniza",
+      "year": "2026",
+      "image": "assets/gallery/work-flyer-poster.jpg",
+      "aspect": "portrait",
+      "description": "Composición gráfica simétrica para medios impresos y difusión digital, articulando tipografía editorial, jerarquía visual precisa y acentos en carmín mate.",
+      "deliverables": ["PNG Alta Res", "JPG Web", "PDF Impresión", "PSD", "AI"],
+      "whatsappTopic": "Diseño Gráfico de Flyer / Cartel"
+    },
+    {
+      "id": "img-atelier-estudio",
+      "type": "image",
+      "category": "Dirección de Arte",
+      "title": "Del Dibujo Técnico a la Producción Digital",
+      "client": "KAELION Digital Art",
+      "year": "2026",
+      "image": "assets/gallery/hero-atelier.jpg",
+      "aspect": "landscape",
+      "description": "Fotografía conceptual que documenta nuestra metodología híbrida: bocetaje técnico sobre retícula geométrica evolucionando hacia modelado y arte digital calibrado.",
+      "deliverables": ["Dirección de Arte", "Fotografía Editorial", "Retoque Digital"],
+      "whatsappTopic": "Dirección de Arte y Fotografía Profesional"
+    },
+    {
+      "id": "vid-reel-institucional",
+      "type": "video",
+      "category": "Reel Institucional",
+      "title": "Showreel KAELION — Geometría en Movimiento",
+      "client": "KAELION Digital Art",
+      "year": "2026",
+      "duration": "00:45",
+      "reelStyle": "orbital",
+      "videoUrl": "",
+      "description": "Secuencia audiovisual institucional combinando trazos de retícula áurea, ritmo sonoro orgánico y transiciones editoriales de alto contraste en paleta obsidiana y carmín.",
+      "deliverables": ["MP4 4K", "Versión Vertical 9:16", "Master de Audio"],
+      "whatsappTopic": "Producción de Video Institucional / Reel"
+    },
+    {
+      "id": "vid-capsula-promocional",
+      "type": "video",
+      "category": "Video Promocional",
+      "title": "Cápsula de Lanzamiento — Onda & Tipografía",
+      "client": "Sonora Nexo",
+      "year": "2026",
+      "duration": "00:30",
+      "reelStyle": "waveform",
+      "videoUrl": "",
+      "description": "Producción promocional de impacto para redes sociales y pauta digital. Sincronización de diseño sonoro con gráficos cinéticos adaptados a Reels, TikTok y YouTube Shorts.",
+      "deliverables": ["Motion Graphics", "Diseño Sonoro", "Adaptación Redes"],
+      "whatsappTopic": "Video Promocional para Redes Sociales"
+    },
+    {
+      "id": "vid-inductivo-marca",
+      "type": "video",
+      "category": "Audiovisual & Marca",
+      "title": "Pieza Inductiva — Arquitectura de Identidad",
+      "client": "Casa Basalto",
+      "year": "2025",
+      "duration": "01:10",
+      "reelStyle": "architecture",
+      "videoUrl": "",
+      "description": "Narrativa visual para presentación corporativa y bienvenida de clientes, traduciendo los valores del manual de marca en una pieza audiovisual sobria y memorable.",
+      "deliverables": ["Guion Visual", "Edición & Color", "Subtítulos", "MP4 Web"],
+      "whatsappTopic": "Video Inductivo / Corporativo"
+    },
+    {
+      "id": "web-atelier-vertice",
+      "type": "web",
+      "category": "Sitio Editorial",
+      "title": "Atelier Vértice — Portafolio Arquitectónico",
+      "client": "Atelier Vértice",
+      "year": "2026",
+      "domain": "ateliervertice.com",
+      "liveUrl": "",
+      "themeVariant": "obsidian-editorial",
+      "description": "Sitio web de presencia estratégica con arquitectura limpia, galería de obra a pantalla completa, SEO inicial y embudo de citas directas por WhatsApp Business.",
+      "deliverables": ["Diseño Responsivo", "Dominio .com (1 año)", "Hosting", "SEO + WhatsApp"],
+      "whatsappTopic": "Diseño de Página Web (Landing Page)"
+    },
+    {
+      "id": "web-casa-basalto",
+      "type": "web",
+      "category": "Landing Comercial",
+      "title": "Casa Basalto — Colección & Reservas",
+      "client": "Casa Basalto",
+      "year": "2026",
+      "domain": "casabasalto.mx",
+      "liveUrl": "",
+      "themeVariant": "garnet-showcase",
+      "description": "Landing page de conversión enfocada en narrativa de producto, catálogo fotográfico interactivo, mapa de ubicación y pasarela de pedidos directos.",
+      "deliverables": ["Landing Page", "Catálogo Interactivo", "Formulario & Mapa", "Repositorio Propio"],
+      "whatsappTopic": "Landing Page Comercial con Catálogo"
+    },
+    {
+      "id": "web-sonora-nexo",
+      "type": "web",
+      "category": "Plataforma Creativa",
+      "title": "Sonora Nexo — Estudio de Audio & Lanzamientos",
+      "client": "Sonora Nexo",
+      "year": "2025",
+      "domain": "sonoranexo.art",
+      "liveUrl": "",
+      "themeVariant": "ash-minimal",
+      "description": "Experiencia web multimedia con reproductor editorial integrado, agenda de sesiones, enlaces unificados de redes sociales y estructura optimizada para móviles.",
+      "deliverables": ["Multimedia Integrada", "Integración Redes", "Optimización Móvil", "Entrega Editable"],
+      "whatsappTopic": "Sitio Web Multimedia para Estudio / Marca"
+    }
+  ]
+}

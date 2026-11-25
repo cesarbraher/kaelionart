@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "description": "Configuración de Proyectos Activos de KAELION Digital Art. Agrega el nombre de usuario de GitHub en 'githubAccounts' o repositorios específicos en 'featuredRepos' para sincronizar automáticamente en kaelion.art.",
+    "lastUpdated": "2026-11-25"
+  },
+  "github": {
+    "enabled": true,
+    "githubAccounts": [],
+    "featuredRepos": [],
+    "excludeRepos": ["kaelionart"],
+    "includeForks": false,
+    "maxRepos": 6,
+    "cacheTtlMinutes": 15,
+    "overrides": {}
+  },
+  "activeProjects": [
+    {
+      "id": "kaelion-web-core",
+      "name": "kaelion-studio-platform",
+      "title": "Plataforma Editorial KAELION v2",
+      "client": "Proyecto Interno · I+D",
+      "category": "Desarrollo Web",
+      "status": "En producción",
+      "progress": 92,
+      "summary": "Sistema modular para portafolios creativos de alto rendimiento, integración directa con WhatsApp Business y sincronización de repositorios GitHub en tiempo real.",
+      "stack": ["HTML5", "CSS Editorial", "JavaScript", "GitHub API"],
+      "updatedLabel": "Actualizado esta semana",
+      "repoUrl": "https://github.com/cesarbraher/kaelionart",
+      "demoUrl": "https://kaelion.art",
+      "source": "studio"
+    },
+    {
+      "id": "identidad-geometrica-ai",
+      "name": "kaelion-grid-lab",
+      "title": "Laboratorio de Retícula Áurea + IA",
+      "client": "Metodología Híbrida",
+      "category": "Identidad Visual",
+      "status": "En desarrollo",
+      "progress": 74,
+      "summary": "Flujo asistido para validación de proporciones Fibonacci, construcción isométrica de isotipos y verificación cromática de contraste antes de entrega vectorial.",
+      "stack": ["SVG", "Geometría Áurea", "Adobe Suite", "IA Generativa"],
+      "updatedLabel": "Sprint activo",
+      "repoUrl": "",
+      "demoUrl": "",
+      "source": "studio"
+    },
+    {
+      "id": "catalogo-audiovisual-reel",
+      "name": "reel-motion-pipeline",
+      "title": "Pipeline Audiovisual & Motion",
+      "client": "Producción Comercial",
+      "category": "Audiovisual",
+      "status": "Beta",
+      "progress": 65,
+      "summary": "Sistema de plantillas dinámicas y etalonaje cinematográfico para videos promocionales, cápsulas verticales y lanzamientos de marca en tiempo récord.",
+      "stack": ["Motion Graphics", "Color Grading", "Audio Master", "WebM"],
+      "updatedLabel": "En pruebas internas",
+      "repoUrl": "",
+      "demoUrl": "",
+      "source": "studio"
+    }
+  ]
+}
