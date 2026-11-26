@@ -279,10 +279,69 @@ function initScrollReveal() {
   items.forEach((el) => observer.observe(el));
 }
 
+function initBannerLightbox() {
+  const triggers = document.querySelectorAll('[data-banner-zoom]');
+  const modal = document.getElementById('gallery-modal');
+  const modalTitle = document.getElementById('gallery-modal-title');
+  const modalStage = document.getElementById('gallery-modal-stage');
+  const modalDesc = document.getElementById('gallery-modal-desc');
+  const modalTags = document.getElementById('gallery-modal-tags');
+  const modalWaLink = document.getElementById('gallery-modal-wa');
+  const modalPrev = document.getElementById('gallery-modal-prev');
+  const modalNext = document.getElementById('gallery-modal-next');
+
+  if (!triggers.length || !modal) return;
+
+  function openBanner(el) {
+    const src = el.dataset.bannerSrc || '';
+    const title = el.dataset.bannerTitle || 'Promoción KAELION Digital Art';
+    const desc = el.dataset.bannerDesc || '';
+    const tags = (el.dataset.bannerTags || '').split(',').map((t) => t.trim()).filter(Boolean);
+    const waText = el.dataset.bannerWa || 'Hola KAELION Digital Art, me interesa esta promoción.';
+
+    if (modalTitle) modalTitle.textContent = title;
+    if (modalStage) {
+      modalStage.innerHTML = `<img src="${src}" alt="${title}" style="max-height: 68vh;" />`;
+    }
+    if (modalDesc) modalDesc.textContent = desc;
+    if (modalTags) {
+      modalTags.innerHTML = tags.map((t) => `<span class="tag">${t}</span>`).join('');
+    }
+    if (modalWaLink) {
+      modalWaLink.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waText)}`;
+    }
+    if (modalPrev) modalPrev.style.display = 'none';
+    if (modalNext) modalNext.style.display = 'none';
+
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Restaura botones Anterior/Siguiente al abrir desde la galería normal
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('[data-open-gallery]')) {
+      if (modalPrev) modalPrev.style.display = '';
+      if (modalNext) modalNext.style.display = '';
+    }
+  });
+
+  triggers.forEach((el) => {
+    el.addEventListener('click', () => openBanner(el));
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openBanner(el);
+      }
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initProcessTabs();
   initWhatsAppConcierge();
+  initBannerLightbox();
   initScrollReveal();
   initPortfolioAndGallery();
   initActiveProjects();

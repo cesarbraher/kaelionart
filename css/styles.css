@@ -636,6 +636,163 @@ h4,
 }
 
 /* ==========================================================================
+   Sección Banners Promocionales en Página Principal (#promociones)
+   ========================================================================== */
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.65rem;
+  align-items: stretch;
+}
+
+.promo-card {
+  background-color: var(--obsidian);
+  border: 1px solid var(--graphite);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.28s var(--ease-editorial), border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.promo-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--carmine);
+  box-shadow: var(--shadow-panel);
+}
+
+.promo-card--featured {
+  border-color: var(--garnet);
+}
+
+.promo-card__media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background-color: #0C0B0D;
+  overflow: hidden;
+  border-bottom: 1px solid var(--graphite);
+  cursor: pointer;
+}
+
+.promo-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s var(--ease-editorial);
+}
+
+.promo-card:hover .promo-card__media img {
+  transform: scale(1.025);
+}
+
+.promo-card__zoom {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.34rem 0.68rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background-color: rgba(17, 16, 18, 0.86);
+  color: var(--ash-bright);
+  border: 1px solid var(--graphite);
+  backdrop-filter: blur(6px);
+  opacity: 0.92;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.promo-card:hover .promo-card__zoom {
+  background-color: var(--garnet);
+  border-color: var(--carmine);
+  color: #FFFFFF;
+}
+
+.promo-card__body {
+  padding: 1.45rem 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex: 1;
+}
+
+.promo-card__kicker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--carmine);
+}
+
+.promo-card__price-tag {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--ash-bright);
+  background-color: var(--garnet);
+  padding: 0.22rem 0.6rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.promo-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.32rem;
+  line-height: 1.22;
+  color: var(--ash-bright);
+  margin-top: 0.55rem;
+}
+
+.promo-card__desc {
+  margin: 0.65rem 0 0;
+  font-size: 0.91rem;
+  line-height: 1.62;
+  color: var(--ash-muted);
+}
+
+.promo-card__highlights {
+  list-style: none;
+  margin: 0.95rem 0 0;
+  padding: 0.85rem 0 0;
+  border-top: 1px solid var(--graphite-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.42rem;
+}
+
+.promo-card__highlights li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.85rem;
+  color: var(--ash);
+}
+
+.promo-card__highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 5px;
+  height: 1px;
+  background-color: var(--carmine);
+}
+
+.promo-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.promo-card__actions .btn {
+  width: 100%;
+}
+
+/* ==========================================================================
    Sección Manifiesto & Manual de Identidad (Superficie Ceniza #D4D1D2)
    ========================================================================== */
 .manifesto-grid {
@@ -2256,6 +2413,7 @@ h4,
   .nav-toggle {
     display: inline-flex;
   }
+  .promo-grid,
   .services-grid,
   .cases-grid,
   .gallery-grid,
@@ -2305,6 +2463,7 @@ h4,
     display: none;
   }
   .hero-facts,
+  .promo-grid,
   .services-grid,
   .cases-grid,
   .gallery-grid,
