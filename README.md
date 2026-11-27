@@ -60,3 +60,32 @@ Desde `ops/`, ejecuta `npm run check` si el servidor ya inyecta las variables. C
 - MySQL ejecuta `SELECT 1` en la base indicada.
 - SMTP comprueba TLS y autenticación mediante una conexión de prueba, sin enviar mensajes.
 - Stripe consulta el precio en sandbox. Comprueba que siga activo y sea de **250.00 MXN** en un solo pago.
+
+## Portal de clientes, panel del taller y backend (`server/`)
+
+El repositorio incluye el backend Node.js (`server/`), el portal de clientes (`portal/`), el panel privado del taller (`admin/`) y el aviso de privacidad (`privacidad.html`) para la promoción **Diseño inteligente de logotipos ($250 MXN)**.
+
+### Arranque en staging o producción (MySQL + Stripe + SMTP)
+
+```powershell
+Set-Location server
+Copy-Item .env.example .env
+# Completa server/.env (DB_DRIVER=mysql, MYSQL_*, STRIPE_*, SMTP_*, SESSION_SECRET, APP_ORIGIN)
+npm install
+npm run migrate
+npm run seed:admin
+npm start
+```
+
+### Prueba local rápida sin MySQL (solo desarrollo)
+
+```powershell
+Set-Location server
+$env:DB_DRIVER = "memory"
+npm test
+```
+
+- **Portal de clientes:** `/portal/`
+- **Panel del taller:** `/admin/`
+- **Aviso de privacidad:** `/privacidad.html`
+- **Webhook de Stripe:** `POST /api/stripe/webhook`
