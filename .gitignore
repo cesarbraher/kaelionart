@@ -2,3 +2,5 @@ node_modules/
 .env
 .env.*
 !.env.example
+private_storage/
+server/private_storage/

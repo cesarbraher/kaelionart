@@ -1,6 +1,7 @@
 const CACHE_PREFIX = 'kaelion-public-';
-const CACHE_NAME = CACHE_PREFIX + 'v1';
+const CACHE_NAME = CACHE_PREFIX + 'v2';
 const scope = self.registration.scope;
+const PRIVATE_PATH_RE = /^\/(?:api|portal|admin)(?:\/|$)/;
 
 const pages = new Map([
   ['./', './'],
@@ -45,6 +46,7 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(request.url);
   if (url.origin !== new URL(scope).origin || url.search) return;
+  if (PRIVATE_PATH_RE.test(url.pathname)) return;
 
   if (request.mode === 'navigate') {
     const fallback = pages.get(url.pathname);

@@ -1,0 +1,21 @@
+{
+  "name": "kaelion-portal-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Backend Node.js para el portal de clientes y panel del taller de KAELION Digital Art",
+  "engines": {
+    "node": ">=20.6.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --env-file-if-exists=.env index.js",
+    "migrate": "node --env-file-if-exists=.env db/migrate.js",
+    "seed:admin": "node --env-file-if-exists=.env db/seed-admin.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "mysql2": "3.24.6",
+    "nodemailer": "10.6.1"
+  }
+}
