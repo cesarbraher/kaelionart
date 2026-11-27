@@ -44,3 +44,19 @@ Tienes **3 formas sencillas** cuando quieras conectar la otra cuenta de GitHub:
    ```bash
    node scripts/sync-github-projects.mjs tu-otra-cuenta-github
    ```
+
+## Idiomas y aplicación instalable
+
+La portada en español está en `/` y la versión editorial en inglés en `/en/`. Ambas se enlazan desde el encabezado. La galería completa y los proyectos activos se consultan en las secciones de la portada en español.
+
+Con HTTPS, el navegador puede instalar KAELION Digital Art desde su menú. Tras cargar la aplicación por primera vez, el service worker permite abrir ambas portadas sin conexión. Las rutas del portal, administración, API, pagos y descargas privadas quedan fuera de la caché.
+
+## Verificar servicios desde el entorno de pruebas
+
+Con Node.js 20.6 o posterior, ejecuta `npm install` dentro de `ops/`. Proporciona las variables de `ops/.env.example` en el entorno del servidor o en un archivo local `ops/.env` ignorado por Git.
+
+Desde `ops/`, ejecuta `npm run check` si el servidor ya inyecta las variables. Con un archivo local, usa `node --env-file=.env check-services.mjs`. Agrega `mysql`, `smtp` o `stripe` al final para comprobar un solo servicio.
+
+- MySQL ejecuta `SELECT 1` en la base indicada.
+- SMTP comprueba TLS y autenticación mediante una conexión de prueba, sin enviar mensajes.
+- Stripe consulta el precio en sandbox. Comprueba que siga activo y sea de **250.00 MXN** en un solo pago.
